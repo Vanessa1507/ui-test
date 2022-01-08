@@ -1,4 +1,4 @@
-const Instruction = () => {
+const BannerTop = () => {
   return (
     <div className="banner-top">
       <div className="container">
@@ -17,4 +17,4 @@ const Instruction = () => {
   )
 }
 
-export default Instruction;
+export default BannerTop;

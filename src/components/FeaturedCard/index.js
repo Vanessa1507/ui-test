@@ -1,4 +1,4 @@
-const Banner = () => {
+const FeaturedCard = () => {
   return (
     <div className="banner">
       <div className="container">
@@ -27,4 +27,4 @@ const Banner = () => {
   )
 }
 
-export default Banner;
+export default FeaturedCard;

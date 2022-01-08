@@ -1,5 +1,5 @@
 //Hooks
-import useIsMobile from './../hooks/useIsMobile';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const Header = () => {
   const isMobile = useIsMobile();

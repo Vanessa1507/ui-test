@@ -1,7 +1,7 @@
 //Components
-import Banner from './components/Banner';
-import Header from './components/Header';
-import Instruction from './components/Instruction';
+import Banner from './components/FeaturedCard/index';
+import Header from './components/Header/index';
+import Instruction from './components/BannerTop/index';
 
 
 const App=()=> {
