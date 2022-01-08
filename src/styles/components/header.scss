@@ -8,7 +8,7 @@ header{
   width: 100%;
 
   button{
-    color: $white;
+    @extend .icon;
   }
 
   h1{
@@ -32,5 +32,3 @@ header{
     }
   }
 }
-
-

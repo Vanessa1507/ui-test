@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+.banner-top{
+  margin: 2rem 0;
+  padding: 1rem;
+
+  .container{
+    background-color: $light-grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    div{
+      &:first-child{
+        width: 40%;
+      }
+      &:last-child{
+        width: 58%;
+      }
+    }
+
+    span{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+}

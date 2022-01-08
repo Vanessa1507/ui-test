@@ -12,11 +12,11 @@
   }
 }
 
-.banner-container-information {
+.featured-card {
   margin-bottom: 2rem;
   width: 60%;
 
-  .banner-information {
+  .featured-card-information {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(13px);
     color: $white;
@@ -34,18 +34,18 @@
       font-size: 12px;
     }
 
-    .banner-person-description{
+    .featured-card-person-description{
       font-size: 1.25rem;
       line-height: 1.4rem;
       margin-bottom: 1rem;
     }
 
-    .banner-question-veredict{
+    .featured-card-question-veredict{
       font-weight: 700;
     }
   }
 
-  .banner-thumbs {
+  .featured-card-thumbs {
     display: flex; 
 
     span {
@@ -57,7 +57,7 @@
   }
 }
 
-.banner-time-remainder{
+.closing-in-bar{
   display: flex;
   div{
     padding: 7px;
