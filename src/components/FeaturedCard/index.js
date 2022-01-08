@@ -1,6 +1,6 @@
 const FeaturedCard = () => {
   return (
-    <div className="banner">
+    <div className="hero-featured-card">
       <div className="container">
         <div className="featured-card">
           <div className="featured-card-information">

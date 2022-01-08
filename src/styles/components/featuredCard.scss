@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.banner {
+.hero-featured-card {
   background-image: url("../../img/people/pope-francis.png");
   background-position: 57%;
   background-size: cover;
@@ -35,7 +35,7 @@
     }
 
     .featured-card-person-description{
-      font-size: 1.25rem;
+      font-size: $size15;
       line-height: 1.4rem;
       margin-bottom: 1rem;
     }
@@ -90,7 +90,7 @@
     &:last-child{
       background-color: rgba($color: $white, $alpha: 0.4);
       color: $grey-primary;
-      font-size: 1.5rem;
+      font-size: $size18;
       padding-left: 12px;
       width: 70%;
       span{
