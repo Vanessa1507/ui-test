@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+footer {
+  padding: 0 1rem;
+  .container {
+    align-items: flex-end;
+    display: flex;
+    border-top: 2px dashed $grey-primary;
+    font-size: $size15;
+    font-weight: 400;
+    justify-content: space-between;
+
+    padding: 1.45rem 0 2.8rem;
+    nav {
+      a {
+        display: block;
+        &:not(:last-child) {
+          margin-bottom: $size18;
+        }
+      }
+    }
+
+    .social-media {
+      display: flex;
+      flex-direction: column;
+      p{
+        margin-bottom: 0.5rem ;
+      }
+
+      .social-media-icons{
+        display: flex;
+        justify-content: space-between;
+
+        span{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
