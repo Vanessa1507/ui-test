@@ -1,3 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('../../node_modules/bootstrap/scss/bootstrap.scss');
 
+@import url('./normalize.scss');
 @import url('./icons.scss');
+@import url('./global.scss');
+@import url('./components/index.scss');

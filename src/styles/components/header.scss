@@ -1,0 +1,27 @@
+
+@import '../variables.scss';
+
+header{
+  background: linear-gradient(180deg, rgba(0,0,0,0.6968) 0%, rgba(0,0,0,0) 100%);
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 21px;
+
+  button{
+    color: $white;
+  }
+
+  .menu-movil{
+    height: 100vh;
+    max-width: 400px;
+    position: absolute;
+    width: 100px;
+    
+    form{
+      display: flex;
+    }
+  }
+}
+
+
