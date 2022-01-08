@@ -5,19 +5,16 @@ html, body{
   font-family: $primary-font;
   font-size: 12px;
   font-weight: 300;
-  line-height: 14.4px;
+  line-height: $line-height-normal;
 }
 
 span{
   font-size: 20px;
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
-  padding: 35px 21px;
-}
-
 .container{
   max-width: 740px;
+  padding: 0 21px;
 }
 
 .icon-thumb-up {

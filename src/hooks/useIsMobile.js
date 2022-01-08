@@ -5,7 +5,7 @@ const useIsMobile = () => {
   const mobile = 768;
   const [isMobile, setIsMobile] = useState(window.innerWidth < mobile ? true : false);
 
-  useEffect(() => {
+  useEffect(() => { 
     const setMobile = () => {
       let validation = window.innerWidth < mobile ? true : false;
       setIsMobile(validation);

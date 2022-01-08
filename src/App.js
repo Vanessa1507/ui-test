@@ -1,7 +1,8 @@
 //Components
 import Banner from './components/FeaturedCard/index';
 import Header from './components/Header/index';
-import Instruction from './components/BannerTop/index';
+import BannerTop from './components/Banners/BannerTop';
+import BannerBottom from './components/Banners/BannerBottom';
 
 
 const App=()=> {
@@ -9,7 +10,9 @@ const App=()=> {
     <>
       <Header />
       <Banner />
-      <Instruction/>
+      <BannerTop />
+      <BannerBottom/>
+      
     </>
   );
 }
