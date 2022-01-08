@@ -1,0 +1,101 @@
+@import "../variables.scss";
+
+.banner {
+  background-image: url("../../img/people/pope-francis.png");
+  background-position: 57%;
+  background-size: cover;
+  padding-top: 5.5rem;
+
+  .container {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.banner-container-information {
+  margin-bottom: 2rem;
+  width: 60%;
+
+  .banner-information {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(13px);
+    color: $white;
+    padding: 12px;
+
+    h2{
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 3rem;
+      margin-top: 1px;
+      margin-bottom: 12px;
+    }
+
+    p{
+      font-size: 12px;
+    }
+
+    .banner-person-description{
+      font-size: 1.25rem;
+      line-height: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner-question-veredict{
+      font-weight: 700;
+    }
+  }
+
+  .banner-thumbs {
+    display: flex; 
+
+    span {
+      color: $white;
+      padding: 8px 0;
+      text-align: center;
+      width: 50%;
+    }
+  }
+}
+
+.banner-time-remainder{
+  display: flex;
+  div{
+    padding: 7px;
+    &:first-child{
+      background-color: rgba($color: $black, $alpha: 0.4);
+      color: $white;
+      font-size: 12px;
+      padding-top: 0.7rem;
+      position: relative;
+      text-align: right;
+      text-transform: uppercase;
+      width: 30%;
+
+      &::after{
+        border-bottom: 5px transparent;
+        border-left: 5px rgba($color: $black, $alpha: 0.4) ;
+        border-right: 5px transparent;
+        border-top: 5px transparent;
+        border-style: solid;
+        bottom: 0;
+        content: '';
+        height: 0;
+        margin: auto;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        width: 0;
+      }
+    }
+    &:last-child{
+      background-color: rgba($color: $white, $alpha: 0.4);
+      color: $grey-primary;
+      font-size: 1.5rem;
+      padding-left: 12px;
+      width: 70%;
+      span{
+        font-weight: 700;
+      }
+    }
+  }
+}

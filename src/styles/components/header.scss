@@ -3,13 +3,22 @@
 
 header{
   background: linear-gradient(180deg, rgba(0,0,0,0.6968) 0%, rgba(0,0,0,0) 100%);
-  color: $white;
-  display: flex;
-  justify-content: space-between;
-  padding: 35px 21px;
+  color: $white; 
+  position: fixed;
+  width: 100%;
 
   button{
     color: $white;
+  }
+
+  h1{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
   }
 
   .menu-movil{

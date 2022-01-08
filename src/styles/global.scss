@@ -1,13 +1,10 @@
 @import './variables.scss';
 
-body{
+html, body{
   font-family: $primary-font;
-  font-size: 15px;
-  line-height: 29px;
-}
-
-h1{
-  font-size: 24px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14.4px;
 }
 
 span{
@@ -18,4 +15,25 @@ button{
   background-color: transparent;
   border: none;
   padding: 0;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+  padding: 35px 21px;
+}
+
+.container{
+  max-width: 740px;
+}
+
+.icon{
+  font-size: 1.3rem;
+}
+
+.icon-thumb-up {
+  background-color: rgba($color: $turquoise, $alpha: 0.8);
+  @extend .icon;
+}
+.icon-thumb-down {
+  background-color: rgba($color: $yellow, $alpha: 0.8);
+  @extend .icon;
 }
