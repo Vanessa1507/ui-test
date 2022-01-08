@@ -1,7 +1,12 @@
-function App() {
+//Components
+import Header from './components/Header';
+
+
+const App=()=> {
   return (
-    <div>
-    </div>
+    <>
+    <Header/>
+    </>
   );
 }
 
