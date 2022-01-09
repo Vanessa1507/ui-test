@@ -9,7 +9,7 @@ const FeaturedCard = () => {
             <p className="featured-card-person-description">
               He’s talking tough on clergy sexual abuse, or is he just another pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)
             </p>
-            <p className="featured-card-question-veredict">What’s Your Veredict?</p>
+            <p className="featured-card-question-verdict">What’s Your Verdict?</p>
           </div>
 
           <div className="featured-card-thumbs">
