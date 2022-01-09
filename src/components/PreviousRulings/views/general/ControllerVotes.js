@@ -66,20 +66,24 @@ const ControllerVotes = (props) => {
 
   return (
     <>
-      <p className="view-grid-eyebrow"> {
+      <p className="view-eyebrow"> {
         !voteAlready
           ? `1 month ago in ${category.charAt(0).toUpperCase() + category.slice(1)}`
           : 'Thank you for your vote!'
       }</p>
 
-      <div className="view-grid-controller-votes">
+      <div className="view-controller-votes">
         {
           !voteAlready && (
             <>
               {
                 buttons.map(button => (
-                  <button className={`icon-thumb thumb-${button}`} onClick={() => { changeActiveThumb(button) }} key={`button${button}`}>
-                    <span className={`icon-thumb-${button} ${button === activeThumb ? 'active-thumb' : ''}`} />
+                  <button
+                    className={`icon-thumb thumb-${button} ${button === activeThumb ? 'active-thumb' : ''}`}
+                    key={`button${button}`}
+                    onClick={() => { changeActiveThumb(button) }}
+                  >
+                    <span className={`icon-thumb-${button}`} />
                   </button>
                 ))
               }

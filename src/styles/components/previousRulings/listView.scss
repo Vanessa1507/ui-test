@@ -1,0 +1,52 @@
+.previous-rulings--view-list {
+  align-items: flex-end;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 1rem;
+
+  .view-list-container {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 10%,
+      #888888 19%,
+      #666666 50%,
+      rgba(51, 51, 51, 0.6) 71.88%
+    );
+
+    .view-container-information {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: auto;
+      padding-right: 1rem;
+
+      .view-information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85%;
+        div {
+          &:first-child {
+            flex-basis: 60%;
+            padding-right: 2rem;
+          }
+        }
+        .view-name {
+          font-size: 2rem;
+          -webkit-line-clamp: 1;
+        }
+        .view-description {
+          font-size: 1rem;
+        }
+        .view-eyebrow{
+          margin-top: 0.5rem;
+        }
+        .button-vote {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}

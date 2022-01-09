@@ -1,5 +1,13 @@
 @import "../../variables.scss";
 
+.text-overflow {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .previous-rulings {
   margin-bottom: 2rem;
 
@@ -27,6 +35,33 @@
     padding: 0.58rem;
     span {
       font-size: 1.3rem;
+    }
+  }
+
+  .view-container-information {
+    color: $white;
+    font-weight: 400;
+    padding: 0 2.5rem;
+    position: relative;
+
+    .icon-verdict {
+      position: absolute;
+      left: 0;
+    }
+
+    .view-name {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      margin-bottom: 7px;
+      @extend .text-overflow;
+    }
+
+    .view-description {
+      font-size: $size1_25;
+      height: 3rem;
+      line-height: $size1_5;
+      margin-bottom: 1rem;
+      @extend .text-overflow;
     }
   }
 
@@ -69,13 +104,13 @@
     }
   }
 
-  .view-grid-eyebrow {
+  .view-eyebrow {
     line-height: normal;
     margin-bottom: 1rem;
     text-align: right;
   }
 
-  .view-grid-controller-votes {
+  .view-controller-votes {
     align-items: center;
     display: flex;
     justify-content: end;
@@ -123,9 +158,11 @@
     padding: 0;
     .container {
       padding: 0 $size1_5;
+
       .previous-rulings-tittle {
         display: flex;
         justify-content: space-between;
+
         h2 {
           font-size: 1.72rem;
           line-height: 2rem;
@@ -207,11 +244,11 @@
       }
     }
 
-    .view-grid-eyebrow {
+    .view-eyebrow {
       font-size: 0.9rem;
     }
 
-    .view-grid-controller-votes {
+    .view-controller-votes {
       .button-vote {
         font-size: 1rem;
       }

@@ -5,6 +5,7 @@ import dataVotes from './../../data/dataVotes';
 import GridCard from './views/GridCard';
 import getPercent from '../../js/functions/getPercent';
 import { useDispatch, useTrackedState } from '../../Store';
+import ListCard from './views/ListCard';
 
 const views = ['List', 'Grid'];
 
@@ -15,7 +16,7 @@ const PreviousRulings = () => {
   const dispatch = useDispatch();
 
   //Local states
-  const [styleView, setStyleView] = useState('Grid');
+  const [styleView, setStyleView] = useState('List');
   const [isShowPicker, setIsShowPicker] = useState(true);
   const [dataVotesPeople, setDataVotesPeople] = useState([]);
 
@@ -110,6 +111,17 @@ const PreviousRulings = () => {
                   styleView === 'Grid' && dataVotesPeople.map((card, index) => {
                     return (
                       <GridCard
+                        index={index}
+                        card={card}
+                        key={index}
+                      />
+                    )
+                  })
+                }
+                {
+                  styleView === 'List' && dataVotesPeople.map((card, index) => {
+                    return (
+                      <ListCard
                         index={index}
                         card={card}
                         key={index}

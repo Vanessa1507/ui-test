@@ -1,13 +1,5 @@
 @import "../../variables.scss";
 
-.text-overflow {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .previous-rulings--view-grid {
   align-items: flex-end;
   background-size: cover;
@@ -23,32 +15,6 @@
   position: relative;
 }
 
-.view-grid-container-information {
-  color: $white;
-  font-weight: 400;
-  padding: 0 2.5rem;
-  position: relative;
-
-  .icon-verdict {
-    position: absolute;
-    left: 0;
-  }
-
-  .view-grid-name {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    margin-bottom: 7px;
-    @extend .text-overflow;
-  }
-
-  .view-grid-description {
-    font-size: $size1_25;
-    height: 3rem;
-    line-height: $size1_5;
-    margin-bottom: 1rem;
-    @extend .text-overflow;
-  }
-}
 
 @media all and (min-width: 768px) {
   .previous-rulings--view-grid {
@@ -63,12 +29,11 @@
       left: 0;
     }
 
-    .view-grid-description {
+    .view-description {
       font-size: 1.1rem;
       height: 3rem;
       line-height: $size1_5;
       margin-bottom: 1rem;
-      @extend .text-overflow;
     }
   }
 }

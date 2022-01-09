@@ -16,14 +16,14 @@ const GridCard = (props) => {
       }}
     >
       <div className='view-grid-container'>
-        <div className="view-grid-container-information">
+        <div className="view-container-information">
           {
             votes.positive !== votes.negative &&
             <span className={`icon-verdict icon-thumb icon-thumb-${votes.positive > votes.negative ? 'up' : 'down'}  thumb-${votes.positive > votes.negative ? 'up' : 'down'}`} />
           }
-          <div className="view-grid-information">
-            <h3 className="view-grid-name">{name}</h3>
-            <p className="view-grid-description">{description}</p>
+          <div className="view-information">
+            <h3 className="view-name">{name}</h3>
+            <p className="view-description">{description}</p>
 
             <ControllerVotes
               category={category}
