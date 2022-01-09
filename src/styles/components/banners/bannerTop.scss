@@ -5,29 +5,62 @@
   padding: 0 1rem;
 
   .container {
-    align-items: center;
-    background-color: $light-grey;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    .banner-top-container {
+      align-items: center;
+      background-color: $light-grey;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
 
-    div {
-      font-size: $size15;
-      letter-spacing: -0.06rem;
-      line-height: $size18;
-      &:first-child {
-        line-height: normal;
-        padding-right: 2rem;
-        width: 40%;
+      div {
+        font-size: $size1_25;
+        letter-spacing: -0.06rem;
+        line-height: $size1_5;
+        &:first-child {
+          line-height: normal;
+          padding-right: 2rem;
+          flex-basis: 30%;
+        }
+        &:last-child {
+          flex-basis: 70%;
+        }
       }
-      &:last-child {
-        width: 58%;
+
+      span {
+        font-size: 2rem;
+        font-weight: 700;
       }
     }
+  }
+}
 
-    span {
-      font-size: 2rem;
-      font-weight: 700;
+@media all and (min-width: 768px) {
+  .banner-top {
+    padding: 0 1.5rem;
+
+    .container {
+      padding: 0;
+      .banner-top-container {
+        padding: 1rem;
+
+        div {
+          font-size: 1.3rem;
+          letter-spacing: normal;
+          line-height: $size1_5;
+          &:first-child {
+            font-size: 1rem;
+            padding-right: $size1_5;
+            flex-basis: 20%;
+
+            span {
+              font-size: $size1_5;
+            }
+          }
+          &:last-child {
+            flex-basis: 80%;
+          }
+        }
+      }
     }
   }
 }

@@ -1,5 +1,21 @@
 @import "../variables.scss";
 
+.closing-in-bar-after {
+  border-bottom: 5px transparent;
+  border-left: 5px rgba($color: $black, $alpha: 0.4);
+  border-right: 5px transparent;
+  border-top: 5px transparent;
+  border-style: solid;
+  bottom: 0;
+  content: "";
+  height: 0;
+  margin: auto;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 0;
+}
+
 .hero-featured-card {
   background-image: url("../../img/people/pope-francis.png");
   background-position: 57%;
@@ -15,22 +31,22 @@
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(13px);
     color: $white;
-    padding: 12px;
+    padding: 1rem;
 
     h2 {
       font-size: 3rem;
       font-weight: 400;
       line-height: 3rem;
       margin-top: 1px;
-      margin-bottom: 12px;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 12px;
+      font-size: 1rem;
     }
 
     .featured-card-person-description {
-      font-size: $size15;
+      font-size: $size1_25;
       line-height: 1.4rem;
       margin-bottom: 1rem;
     }
@@ -43,9 +59,9 @@
   .featured-card-thumbs {
     display: flex;
 
-    span {
+    div {
       color: $white;
-      padding: 8px 0;
+      padding: $size0_5 0;
       text-align: center;
       width: 50%;
     }
@@ -59,7 +75,7 @@
     &:first-child {
       background-color: rgba($color: $black, $alpha: 0.4);
       color: $white;
-      font-size: 12px;
+      font-size: 1rem;
       padding-top: 0.7rem;
       position: relative;
       text-align: right;
@@ -67,29 +83,92 @@
       width: 30%;
 
       &::after {
-        border-bottom: 5px transparent;
-        border-left: 5px rgba($color: $black, $alpha: 0.4);
-        border-right: 5px transparent;
-        border-top: 5px transparent;
-        border-style: solid;
-        bottom: 0;
-        content: "";
-        height: 0;
-        margin: auto;
-        position: absolute;
-        right: -10px;
-        top: 0;
-        width: 0;
+        @extend .closing-in-bar-after;
       }
     }
     &:last-child {
       background-color: rgba($color: $white, $alpha: 0.4);
       color: $grey-primary;
-      font-size: $size18;
-      padding-left: 12px;
+      font-size: $size1_5;
+      padding-left: 1rem;
       width: 70%;
       span {
         font-weight: 700;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .hero-featured-card {
+    background-position: top;
+  }
+  .featured-card {
+    margin-bottom: 1.89rem;
+    width: 50%;
+
+    .featured-card-information {
+      padding: 2rem 1.5rem;
+
+      h2 {
+        font-size: 2rem;
+        line-height: $size1_5;
+        margin-top: 0.5rem;
+        margin-bottom: $size1_5;
+      }
+
+      .featured-card-person-description {
+        font-size: $size1_25;
+        line-height: $size1_5;
+      }
+
+      .featured-card-more-information {
+        margin-bottom: 1.34rem;
+        a {
+          border-bottom: 1px solid;
+          font-size: 1rem;
+          padding-bottom: 0.05rem;
+        }
+        span {
+          font-size: 1rem;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .featured-card-question-verdict {
+        font-size: $size1_5;
+        line-height: $size1_8;
+      }
+    }
+
+    .featured-card-thumbs {
+      div {
+        padding: 0.7rem 0;
+        span {
+          font-size: $size1_5;
+        }
+      }
+    }
+  }
+
+  .closing-in-bar {
+    display: flex;
+    div {
+      padding: 1rem;
+      &:first-child {
+        padding-top: 1rem;
+
+        &::after {
+          @extend .closing-in-bar-after;
+          border-width: 8px;
+          right: -16px;
+        }
+      }
+      &:last-child {
+        font-size: 1.3rem;
+        span {
+          font-weight: 400;
+        }
       }
     }
   }

@@ -9,7 +9,7 @@ const elementsMenu = [
 ]
 
 const Header = () => {
-  const [isShowMenu, setIsShowMenu] = useState(true);
+  const [isShowMenu, setIsShowMenu] = useState(false);
   const isMobile = useIsMobile();
 
   const closeOpenMenu = (value) => setIsShowMenu(value);

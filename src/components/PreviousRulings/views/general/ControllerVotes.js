@@ -78,8 +78,8 @@ const ControllerVotes = (props) => {
             <>
               {
                 buttons.map(button => (
-                  <button onClick={() => { changeActiveThumb(button) }} key={`button${button}`}>
-                    <span className={`icon-thumb icon-thumb-${button} ${button === activeThumb ? 'active-thumb' : ''}`} />
+                  <button className={`icon-thumb thumb-${button}`} onClick={() => { changeActiveThumb(button) }} key={`button${button}`}>
+                    <span className={`icon-thumb-${button} ${button === activeThumb ? 'active-thumb' : ''}`} />
                   </button>
                 ))
               }

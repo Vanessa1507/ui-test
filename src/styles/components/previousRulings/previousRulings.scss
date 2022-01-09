@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .previous-rulings {
   margin-bottom: 2rem;
 
@@ -11,12 +13,166 @@
       }
     }
 
-    .previous-rulings-cards{
+    .previous-rulings-cards {
       display: -webkit-box;
       overflow: auto;
 
-      .previous-rulings--view-grid{
+      .previous-rulings--view-grid {
         margin-right: 1rem;
+      }
+    }
+  }
+
+  .icon-thumb {
+    padding: 0.58rem;
+    span {
+      font-size: 1.3rem;
+    }
+  }
+
+  .thumbs-gauge {
+    display: flex;
+    position: relative;
+    div {
+      height: 3rem;
+      p {
+        color: $white;
+        font-size: $size1_5;
+      }
+      span {
+        background-color: transparent;
+        font-size: $size1_25;
+        padding: 0;
+        margin: 0 0.5rem 0 0;
+      }
+    }
+
+    .thumbs-gauge-values {
+      display: flex;
+      height: auto;
+      justify-content: space-between;
+      left: 0;
+      padding: 0.85rem 1rem;
+      position: absolute;
+      width: calc(100% - 2rem);
+    }
+
+    .thumbs-up-gauge {
+      background-color: rgba($color: $turquoise, $alpha: 0.6);
+    }
+    .thumbs-down-gauge {
+      background-color: rgba($color: $yellow, $alpha: 0.6);
+      text-align: right;
+      span {
+        margin: 0 0 0 0.5rem;
+      }
+    }
+  }
+
+  .view-grid-eyebrow {
+    line-height: normal;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  .view-grid-controller-votes {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+
+    button {
+      cursor: pointer;
+      transition: all 0.2s;
+      &:not(:last-child) {
+        margin-right: 1rem;
+        margin-top: 0.2rem;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .active-thumb {
+      border: 2px solid $white;
+    }
+
+    .button-vote {
+      background-color: rgba($color: #303030, $alpha: 0.6);
+      border: 1px solid $white;
+      color: $white;
+      font-size: $size1_25;
+      line-height: $size1_5;
+      padding: 10px 2rem;
+
+      &:disabled {
+        background-color: rgba($color: $black, $alpha: 0.6);
+      }
+    }
+
+    .button-vote-again {
+      background-color: rgba($color: $black, $alpha: 0.6);
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .previous-rulings {
+    margin-bottom: 0;
+    padding: 0;
+    .container {
+      padding: 0 $size1_5;
+      .previous-rulings-tittle {
+        h2 {
+          font-size: 1.72rem;
+          line-height: 2rem;
+        }
+      }
+
+      .previous-rulings-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .previous-rulings--view-grid:nth-child(even) {
+          margin-right: 0;
+        }
+        .previous-rulings--view-grid {
+          margin-bottom: $size1_5;
+        }
+      }
+    }
+
+    .thumbs-gauge {
+      div {
+        height: 2.5rem;
+        p {
+          font-size: $size1_25;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      .thumbs-gauge-values {
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+        left: 0;
+        padding: 0.8rem 1rem;
+        position: absolute;
+        width: calc(100% - 2rem);
+      }
+    }
+
+    .view-grid-eyebrow {
+      font-size: 0.9rem;
+    }
+
+    .view-grid-controller-votes {
+      .button-vote {
+        font-size: 1rem;
       }
     }
   }

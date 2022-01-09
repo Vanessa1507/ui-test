@@ -2,47 +2,80 @@
 
 .banner-bottom {
   margin: 2rem 0;
-  padding: 0 1rem;
 
   .container {
-    align-items: center;
-    background-image: url('../../../img/banners/bg-people.png');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    padding: 1rem;
+    padding: 0 1rem;
     position: relative;
 
-    &::before{
-      content: '';
-      background-color: rgba($color: $white, $alpha: 0.8);
-      height: 100%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+    .container-banner-bottom {
+      align-items: center;
+      background-image: url("../../../img/banners/bg-people.png");
+      background-position: center;
+      background-size: cover;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      padding: 1rem 0;
+      position: relative;
 
-    button{
-      border: 2px solid $grey-secundary;
-      color: $grey-secundary;
-      font-size: $size18;
-      margin-bottom: 2px;
-      padding: 13px 0;
-      width: 80%;
-      z-index: 1;
-    }
+      &::before {
+        content: "";
+        background-color: rgba($color: $white, $alpha: 0.8);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
 
-    .banner-bottom-description {
-      font-size: 2rem;
-      letter-spacing: -0.06rem;
-      line-height: $line-height-normal * 2;
-      margin-bottom: 1rem;
-      text-align: center;
-      width: 80%;
-      z-index: 1;
+      button {
+        border: 2px solid $grey-secundary;
+        color: $grey-secundary;
+        font-size: $size1_5;
+        margin-bottom: 2px;
+        padding: 13px 0;
+        width: 80%;
+        z-index: 1;
+      }
+      .banner-bottom-description {
+        font-size: 2rem;
+        letter-spacing: -0.06rem;
+        line-height: $line-height-normal * 2;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 70%;
+        z-index: 1;
+      }
     }
+  }
+}
 
+@media all and(min-width:768px) {
+  .banner-bottom {
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+    .container {
+      padding: 0;
+      .container-banner-bottom {
+        align-items: center;
+        flex-direction: row;
+        font-size: $size1_5;
+        justify-content: space-between;
+        padding: 1rem;
+
+        button {
+          margin-bottom: 0;
+          width: 33%;
+        }
+
+        .banner-bottom-description {
+          font-size: 1em;
+          margin-bottom: 0;
+          text-align: left;
+          width: 60%;
+        }
+      }
+    }
   }
 }

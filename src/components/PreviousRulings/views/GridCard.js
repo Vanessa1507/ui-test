@@ -19,7 +19,7 @@ const GridCard = (props) => {
         <div className="view-grid-container-information">
           {
             votes.positive !== votes.negative &&
-            <span className={`icon-verdict icon-thumb icon-thumb-${votes.positive > votes.negative ? 'up' : 'down'}`} />
+            <span className={`icon-verdict icon-thumb icon-thumb-${votes.positive > votes.negative ? 'up' : 'down'}  thumb-${votes.positive > votes.negative ? 'up' : 'down'}`} />
           }
           <div className="view-grid-information">
             <h3 className="view-grid-name">{name}</h3>

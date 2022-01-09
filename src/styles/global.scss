@@ -1,6 +1,7 @@
-@import './variables.scss';
+@import "./variables.scss";
 
-html, body{
+html,
+body {
   color: $grey-primary;
   font-family: $primary-font;
   font-size: 12px;
@@ -8,28 +9,42 @@ html, body{
   line-height: $line-height-normal;
 }
 
-span{
+span {
   font-size: 20px;
 }
 
-.container{
-  max-width: 740px;
+.container {
+  margin: auto;
+  max-width: 720px;
   padding: 0 21px;
 }
 
-.icon-thumb-up {
+.thumb-up {
   background-color: rgba($color: $turquoise, $alpha: 0.8);
-  
-  &:hover{
-    background-color: rgba($color: $turquoise, $alpha: 1);;
+
+  &:hover {
+    background-color: rgba($color: $turquoise, $alpha: 1);
   }
   @extend .icon;
 }
-.icon-thumb-down {
+
+.thumb-down {
   background-color: rgba($color: $yellow, $alpha: 0.8);
   transition: all 0.3s;
-  &:hover{
-    background-color: rgba($color: $yellow, $alpha: 1);;
+  &:hover {
+    background-color: rgba($color: $yellow, $alpha: 1);
   }
   @extend .icon;
+}
+
+@media all and (min-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 $size1_5;
+    max-width: 960px;
+  }
 }
