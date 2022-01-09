@@ -19,9 +19,17 @@ span{
 
 .icon-thumb-up {
   background-color: rgba($color: $turquoise, $alpha: 0.8);
+  
+  &:hover{
+    background-color: rgba($color: $turquoise, $alpha: 1);;
+  }
   @extend .icon;
 }
 .icon-thumb-down {
   background-color: rgba($color: $yellow, $alpha: 0.8);
+  transition: all 0.3s;
+  &:hover{
+    background-color: rgba($color: $yellow, $alpha: 1);;
+  }
   @extend .icon;
 }

@@ -104,6 +104,7 @@
     margin-bottom: 1rem;
 
     button {
+      cursor: pointer;
       transition: all 0.2s;
       &:not(:last-child) {
         margin-right: 1rem;
