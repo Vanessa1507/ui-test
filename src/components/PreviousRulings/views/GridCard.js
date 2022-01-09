@@ -24,11 +24,12 @@ const GridCard = (props) => {
           <div className="view-grid-information">
             <h3 className="view-grid-name">{name}</h3>
             <p className="view-grid-description">{description}</p>
-            <p className="view-grid-date"> 1 ago in {category}</p>
 
             <ControllerVotes
+              category={category}
               id={id}
               index={index}
+              lastUpdated={lastUpdated}
             />
           </div>
         </div>
