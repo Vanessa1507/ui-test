@@ -3,7 +3,8 @@ import { createContainer } from "react-tracked";
 import reducer from "./actions";
 
 const initialState = {
-  people: null
+  cards: [],
+  newChange: false
 };
 
 

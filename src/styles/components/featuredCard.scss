@@ -17,7 +17,7 @@
     color: $white;
     padding: 12px;
 
-    h2{
+    h2 {
       font-size: 3rem;
       font-weight: 400;
       line-height: 3rem;
@@ -25,23 +25,23 @@
       margin-bottom: 12px;
     }
 
-    p{
+    p {
       font-size: 12px;
     }
 
-    .featured-card-person-description{
+    .featured-card-person-description {
       font-size: $size15;
       line-height: 1.4rem;
       margin-bottom: 1rem;
     }
 
-    .featured-card-question-verdict{
+    .featured-card-question-verdict {
       font-weight: 700;
     }
   }
 
   .featured-card-thumbs {
-    display: flex; 
+    display: flex;
 
     span {
       color: $white;
@@ -52,11 +52,11 @@
   }
 }
 
-.closing-in-bar{
+.closing-in-bar {
   display: flex;
-  div{
+  div {
     padding: 7px;
-    &:first-child{
+    &:first-child {
       background-color: rgba($color: $black, $alpha: 0.4);
       color: $white;
       font-size: 12px;
@@ -66,14 +66,14 @@
       text-transform: uppercase;
       width: 30%;
 
-      &::after{
+      &::after {
         border-bottom: 5px transparent;
-        border-left: 5px rgba($color: $black, $alpha: 0.4) ;
+        border-left: 5px rgba($color: $black, $alpha: 0.4);
         border-right: 5px transparent;
         border-top: 5px transparent;
         border-style: solid;
         bottom: 0;
-        content: '';
+        content: "";
         height: 0;
         margin: auto;
         position: absolute;
@@ -82,13 +82,13 @@
         width: 0;
       }
     }
-    &:last-child{
+    &:last-child {
       background-color: rgba($color: $white, $alpha: 0.4);
       color: $grey-primary;
       font-size: $size18;
       padding-left: 12px;
       width: 70%;
-      span{
+      span {
         font-weight: 700;
       }
     }

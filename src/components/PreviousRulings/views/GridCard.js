@@ -1,19 +1,12 @@
-import { useEffect } from 'react';
+//Components
 import ControllerVotes from './general/ControllerVotes';
 import ThumbsGauge from './general/ThumbsGauge';
 
 const GridCard = (props) => {
-  const { person } = props;
-  const { description, category, lastUpdated, name, percent, picture, votes } = person;
+  const { index, card } = props;
+  const { description, category, id, lastUpdated, name, percent, picture, votes } = card;
 
-
-  const date1 = new Date(lastUpdated)
-  // console.log(Math.abs(new Date() - date1) / (1000 * 3600 * 24))
-
-  useEffect(() => {
-
-  }, [])
-
+  // const date1 = new Date(lastUpdated)
 
   return (
     <div
@@ -32,7 +25,11 @@ const GridCard = (props) => {
             <h3 className="view-grid-name">{name}</h3>
             <p className="view-grid-description">{description}</p>
             <p className="view-grid-date"> 1 ago in {category}</p>
-            <ControllerVotes />
+
+            <ControllerVotes
+              id={id}
+              index={index}
+            />
           </div>
         </div>
 
@@ -41,7 +38,6 @@ const GridCard = (props) => {
           negativePercent={percent.negative}
         />
       </div>
-
     </div>
   );
 };

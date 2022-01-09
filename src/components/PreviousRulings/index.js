@@ -9,8 +9,7 @@ import { useDispatch, useTrackedState } from '../../Store';
 const PreviousRulings = () => {
   //Store
   const state = useTrackedState();
-  const { people } = state;
-
+  const { cards, newChange } = state;
   const dispatch = useDispatch();
 
   //Local states
@@ -22,9 +21,13 @@ const PreviousRulings = () => {
 
   useEffect(() => {
     saveDataLocalStorage();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+
+  useEffect(() => {
+    setDataVotesPeople(cards)
+  }, [cards, newChange])
 
   useEffect(() => {
     if (isMobile) {
@@ -37,42 +40,34 @@ const PreviousRulings = () => {
     const votes = localStorage.getItem('dataVotes');
     let data = [];
 
-    if (!!votes) {
-      data = JSON.parse(localStorage.getItem('dataVotes'));
+    if (!!votes && !!JSON.parse(votes)) {
+      data = JSON.parse(votes);
     } else {
       data = dataVotes;
-      localStorage.setItem('dataVotes', JSON.stringify(data));
     };
 
+    const dataVote = [];
     data.map((dataPerson, index) => {
-      const positiveVotes = dataPerson.votes.positive;
-      const negativeVotes = dataPerson.votes.negative;
-      const totalVotes = positiveVotes + negativeVotes;
+      const values = dataPerson.votes;
+      const percent = getPercent({ values });
 
-      const positivePercent = `${getPercent({ number: positiveVotes, total: totalVotes })}%`;
-      const negativePercent = `${getPercent({ number: negativeVotes, total: totalVotes })}%`;
-
-      const percent = {
-        positive: positivePercent,
-        negative: negativePercent,
-      }
-
-      return data[index] = {
+      return dataVote.push(data[index] = {
         ...dataPerson,
         percent: percent
-      }
+      })
     })
-console.log(data)
+
+    localStorage.setItem('dataVotes', JSON.stringify(dataVote));
+    setDataVotesPeople(dataVote);
+
     dispatch({
       type: 'SET_DATA',
-      property: 'people',
-      value: data
+      property: 'cards',
+      value: dataVote
     })
   };
 
-
   const changeStyleView = (view) => setStyleView(view);
-
 
   return (
     <div className="previous-rulings">
@@ -82,14 +77,21 @@ console.log(data)
         </div>
         <div className={`previous-rulings-cards`}>
           {
-            !!people && people.lenght !== 0 && people.map(person => {
-              return (
-                <GridCard
-                  person={person}
-                  key={person.id}
-                />
-              )
-            })
+            !!dataVotesPeople && dataVotesPeople.lenght !== 0 && (
+              <>
+                {
+                  styleView === 'grid' && dataVotesPeople.map((card, index) => {
+                    return (
+                      <GridCard
+                        index={index}
+                        card={card}
+                        key={index}
+                      />
+                    )
+                  })
+                }
+              </>
+            )
           }
         </div>
       </div>
