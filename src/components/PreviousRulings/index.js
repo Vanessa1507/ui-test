@@ -6,6 +6,8 @@ import GridCard from './views/GridCard';
 import getPercent from '../../js/functions/getPercent';
 import { useDispatch, useTrackedState } from '../../Store';
 
+const views = ['List', 'Grid'];
+
 const PreviousRulings = () => {
   //Store
   const state = useTrackedState();
@@ -13,7 +15,8 @@ const PreviousRulings = () => {
   const dispatch = useDispatch();
 
   //Local states
-  const [styleView, setStyleView] = useState('grid');
+  const [styleView, setStyleView] = useState('Grid');
+  const [isShowPicker, setIsShowPicker] = useState(true);
   const [dataVotesPeople, setDataVotesPeople] = useState([]);
 
   //Hooks
@@ -31,7 +34,8 @@ const PreviousRulings = () => {
 
   useEffect(() => {
     if (isMobile) {
-      changeStyleView('grid');
+      changeStyleView('Grid');
+      setIsShowPicker(false);
     };
   }, [isMobile]);
 
@@ -69,18 +73,41 @@ const PreviousRulings = () => {
 
   const changeStyleView = (view) => setStyleView(view);
 
+  const openClosePicker = () => setIsShowPicker(!isShowPicker);
+
   return (
     <div className="previous-rulings">
       <div className="container">
         <div className='previous-rulings-tittle'>
           <h2>Previous Rulings</h2>
+
+          {
+            !isMobile && (
+              <ul className='view-picker'>
+                <li onClick={openClosePicker} className='view-picker-selected-option'>{styleView} <span className='icon-arrow-down' /></li>
+                <ul className='view-picker-options' style={{ height: isShowPicker ? '6rem' : 0 }}>
+                  {
+                    !!views && views.length !== 0 &&
+                    views.map(view => (
+                      <li onClick={() => {
+                        openClosePicker();
+                        changeStyleView(view);
+                      }} key={view}>
+                        {view}
+                      </li>
+                    ))
+                  }
+                </ul>
+              </ul>
+            )
+          }
         </div>
         <div className={`previous-rulings-cards`}>
           {
             !!dataVotesPeople && dataVotesPeople.lenght !== 0 && (
               <>
                 {
-                  styleView === 'grid' && dataVotesPeople.map((card, index) => {
+                  styleView === 'Grid' && dataVotesPeople.map((card, index) => {
                     return (
                       <GridCard
                         index={index}
