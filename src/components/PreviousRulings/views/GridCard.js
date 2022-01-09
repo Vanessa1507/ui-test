@@ -4,12 +4,11 @@ import ThumbsGauge from './general/ThumbsGauge';
 
 const GridCard = (props) => {
   const { person } = props;
-  const { description, category, lastUpdated, name, picture, votes } = person;
-  const { positive, negative } = votes;
+  const { description, category, lastUpdated, name, percent, picture, votes } = person;
 
 
   const date1 = new Date(lastUpdated)
-  console.log(Math.abs(new Date() - date1) / (1000 * 3600 * 24))
+  // console.log(Math.abs(new Date() - date1) / (1000 * 3600 * 24))
 
   useEffect(() => {
 
@@ -25,7 +24,10 @@ const GridCard = (props) => {
     >
       <div className='view-grid-container'>
         <div className="view-grid-container-information">
-          <span className="icon-thumb icon-thumb-up" />
+          {
+            votes.positive !== votes.negative &&
+            <span className={`icon-veredict icon-thumb icon-thumb-${votes.positive > votes.negative ? 'up' : 'down'}`} />
+          }
           <div className="view-grid-information">
             <h3 className="view-grid-name">{name}</h3>
             <p className="view-grid-description">{description}</p>
@@ -34,10 +36,9 @@ const GridCard = (props) => {
           </div>
         </div>
 
-
         <ThumbsGauge
-          positivePercent="50%"
-          negativePercent="50%"
+          positivePercent={percent.positive}
+          negativePercent={percent.negative}
         />
       </div>
 

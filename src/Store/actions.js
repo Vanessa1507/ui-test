@@ -3,7 +3,7 @@ const reducer = (state, action) => {
     case 'SET_DATA':
       return {
         ...state, 
-        [action.property]: action.vaalue
+        [action.property]: action.value
       }
     
     default:
