@@ -17,7 +17,7 @@ const PreviousRulings = () => {
   const [dataVotesPeople, setDataVotesPeople] = useState([]);
 
   //Hooks
-  const isMobile = useIsMobile();
+  const { isMobile } = useIsMobile();
 
   useEffect(() => {
     saveDataLocalStorage();

@@ -2,7 +2,7 @@ import useIsMobile from './../../hooks/useIsMobile';
 
 const FeaturedCard = () => {
 
-  const isMobile = useIsMobile()
+  const { isMobile } = useIsMobile()
 
   return (
     <div className="hero-featured-card">

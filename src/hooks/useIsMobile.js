@@ -1,14 +1,26 @@
 import { useEffect, useState } from "react";
 
+const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1440,
+}
+
 const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
-  const mobile = 768;
-  const [isMobile, setIsMobile] = useState(window.innerWidth < mobile ? true : false);
-
-  useEffect(() => { 
+  useEffect(() => {
     const setMobile = () => {
-      let validation = window.innerWidth < mobile ? true : false;
-      setIsMobile(validation);
+      const isMobile = window.innerWidth < breakpoints.md;
+      const isTablet = window.innerWidth >= breakpoints.md && window.innerWidth < breakpoints.lg;
+      const isDesktop = window.innerWidth >= breakpoints.lg;
+
+      setIsMobile(isMobile)
+      setIsTablet(isTablet)
+      setIsDesktop(isDesktop)
+      // setIsMobile(validation);
     }
 
     setMobile();
@@ -18,7 +30,7 @@ const useIsMobile = () => {
     }
   }, [])
 
-  return isMobile;
+  return { isMobile, isTablet, isDesktop };
 }
 
 export default useIsMobile;

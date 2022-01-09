@@ -10,7 +10,7 @@ const elementsMenu = [
 
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
-  const isMobile = useIsMobile();
+  const {isDesktop} = useIsMobile();
 
   const closeOpenMenu = (value) => setIsShowMenu(value);
 
@@ -20,7 +20,7 @@ const Header = () => {
       <div className='container'>
         <h1>Rule of thumb.</h1>
         {
-          isMobile && (
+          !isDesktop && (
             <>
               <button onClick={(e) => closeOpenMenu(e, true)}>
                 <span className='icon-menu' />
@@ -53,13 +53,13 @@ const Header = () => {
             </>
           )
         }
-        {
+        {/* {
           !isMobile && (
             <button>
               <span className='icon-menu' />
             </button>
           )
-        }
+        } */}
       </div>
     </header>
   );
