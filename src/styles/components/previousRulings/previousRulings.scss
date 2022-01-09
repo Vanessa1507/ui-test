@@ -1,0 +1,23 @@
+.previous-rulings {
+  margin-bottom: 2rem;
+
+  .container {
+    padding: 0 1rem;
+    .previous-rulings-tittle {
+      margin-bottom: 2rem;
+      h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .previous-rulings-cards{
+      display: -webkit-box;
+      overflow: auto;
+
+      .previous-rulings--view-grid{
+        margin-right: 1rem;
+      }
+    }
+  }
+}

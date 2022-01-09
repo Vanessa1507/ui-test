@@ -11,7 +11,7 @@ const BannerTop = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default BannerTop;

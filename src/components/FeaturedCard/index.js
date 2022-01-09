@@ -24,7 +24,7 @@ const FeaturedCard = () => {
         <div><span>22</span> days</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default FeaturedCard;

@@ -1,0 +1,108 @@
+@import "../../variables.scss";
+
+.text-overflow {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.previous-rulings--view-grid {
+  align-items: flex-end;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: end;
+  width: 300px;
+
+  .icon-thumb {
+    font-size: 1.45rem;
+    padding: 0.5rem;
+  }
+
+  .thumbs-gauge {
+    display: flex;
+    width: 100%;
+    div {
+      padding: 0.85rem 1rem;
+      p {
+        color: $white;
+        font-size: $size18;
+      }
+      span {
+        background-color: transparent;
+        font-size: $size15;
+        padding: 0;
+        margin: 0 0.5rem 0 0;
+      }
+    }
+    .thumbs-up-gauge {
+      background-color: rgba($color: $turquoise, $alpha: 0.6);
+    }
+    .thumbs-down-gauge {
+      background-color: rgba($color: $yellow, $alpha: 0.6);
+      text-align: right;
+      span{
+        margin: 0 0 0 0.5rem ;
+      }
+    }
+  }
+}
+.view-grid-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6968) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.view-grid-container-information {
+  align-items: flex-start;
+  color: $white;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-between;
+
+  .view-grid-information {
+    padding-right: 3rem;
+  }
+  .view-grid-name {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 7px;
+    @extend .text-overflow;
+  }
+
+  .view-grid-description {
+    font-size: $size15;
+    height: 3rem;
+    line-height: $size18;
+    margin-bottom: 1rem;
+    @extend .text-overflow;
+  }
+  .view-grid-date {
+    line-height: normal;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  .view-grid-controller-votes {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+
+    button {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    .button-vote {
+      background-color: rgba($color: $black, $alpha: 0.6);
+      border: 1px solid $white;
+      color: $white;
+      font-size: $size15;
+      line-height: $size18;
+      padding: 10px 2rem;
+    }
+  }
+}

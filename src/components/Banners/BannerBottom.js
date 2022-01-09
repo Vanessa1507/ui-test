@@ -9,7 +9,7 @@ const BannerBottom = () => {
         <button className="banner-bottom--button-submit">Submit a name</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default BannerBottom;
