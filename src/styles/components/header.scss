@@ -69,3 +69,27 @@ header {
     }
   }
 }
+
+
+@media all and (min-width: '1440px'){
+  .desktop-menu{
+    display: flex;
+    align-items: center;
+    
+    li {
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: center;
+
+      &:not(:last-child){
+        margin-right: 1rem;
+      }
+    }
+
+    .desktop-menu-search{
+      span{
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -48,3 +48,15 @@ span {
     max-width: 960px;
   }
 }
+
+@media all and (min-width: 1440px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 0 $size1_5;
+    max-width: 1099px;
+  }
+}

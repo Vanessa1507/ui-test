@@ -10,7 +10,7 @@ const elementsMenu = [
 
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
-  const {isDesktop} = useIsMobile();
+  const { isDesktop } = useIsMobile();
 
   const closeOpenMenu = (value) => setIsShowMenu(value);
 
@@ -53,13 +53,30 @@ const Header = () => {
             </>
           )
         }
-        {/* {
-          !isMobile && (
-            <button>
-              <span className='icon-menu' />
-            </button>
+        {
+          isDesktop && (
+            <>
+              <ul className='desktop-menu'>
+                {
+                  !!elementsMenu && elementsMenu.length &&
+                  elementsMenu.map(link => (
+                    <li onClick={() => closeOpenMenu(false)} >
+                      <a href={link.link}>{link.name}</a>
+                    </li>
+                  ))
+                }
+                <li>
+                  <form className='desktop-menu-search' onSubmit={e => e.preventDefault()}>
+                    {/* <input type='text' /> */}
+                    <button>
+                      <span className='icon-search' />
+                    </button>
+                  </form>
+                </li>
+              </ul>
+            </>
           )
-        } */}
+        }
       </div>
     </header>
   );

@@ -173,3 +173,53 @@
     }
   }
 }
+
+@media all and (min-width: 1440px) {
+  .hero-featured-card {
+    padding-top: 7rem;
+    background-position-y: 20%;
+  }
+  .featured-card {
+    margin-bottom: 1.6rem;
+    width: 48%;
+
+    .featured-card-information {
+      padding: 2rem 5rem 2rem 1.5rem;
+
+      .featured-card-person-description {
+        font-size: 1.3rem;
+        line-height: $line-height-normal * 2;
+      }
+
+      .featured-card-more-information {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .featured-card-thumbs {
+      div {
+        padding: 1.2rem 0;
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .closing-in-bar {
+    display: flex;
+    div {
+      padding: 1rem;
+      &:first-child {
+        font-size: 1.3rem;
+      }
+      &:last-child {
+        font-size: 2rem;
+        span {
+          font-size: 2rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
