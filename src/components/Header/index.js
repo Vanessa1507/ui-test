@@ -41,7 +41,7 @@ const Header = () => {
                       {
                         !!elementsMenu && elementsMenu.length &&
                         elementsMenu.map(link => (
-                          <li onClick={() => closeOpenMenu(false)} >
+                          <li key={`mobile_${link.name}`} onClick={() => closeOpenMenu(false)} >
                             <a href={link.link}>{link.name}</a>
                           </li>
                         ))
@@ -60,14 +60,13 @@ const Header = () => {
                 {
                   !!elementsMenu && elementsMenu.length &&
                   elementsMenu.map(link => (
-                    <li onClick={() => closeOpenMenu(false)} >
+                    <li key={`desktop_${link.name}`} onClick={() => closeOpenMenu(false)} >
                       <a href={link.link}>{link.name}</a>
                     </li>
                   ))
                 }
                 <li>
                   <form className='desktop-menu-search' onSubmit={e => e.preventDefault()}>
-                    {/* <input type='text' /> */}
                     <button>
                       <span className='icon-search' />
                     </button>

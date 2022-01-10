@@ -198,7 +198,7 @@
           }
           .view-picker-options {
             max-height: 6rem;
-            overflow: auto;
+            overflow-y: auto;
             position: absolute;
             transition: all 0.4s;
             width: 100%;
@@ -288,35 +288,36 @@
           font-size: 1rem;
         }
       }
-      
+
       .thumbs-gauge-values {
         padding: 0.5rem 0.8rem;
         width: calc(100% - 1.6rem);
       }
     }
 
-    
-  .view-container-information {
-    .icon-verdict {
-      position: absolute;
-      left: 0;
-    }
+    .view-container-information {
+      padding: 0 1.8rem 0 2.5rem;
+      .icon-verdict {
+        font-size: 1rem;
+        left: 0;
+        position: absolute;
+      }
 
-    .view-name {
-      font-size: 2rem;
-      line-height: normal;
-      -webkit-line-clamp: 2;
-      @extend .text-overflow;
-    }
+      .view-name {
+        font-size: 2rem;
+        line-height: normal;
+        -webkit-line-clamp: 2;
+        @extend .text-overflow;
+      }
 
-    .view-description {
-      font-size: 0.8rem;
-      height: 2.1rem;
-      line-height: 1rem;
-      margin-bottom: 0.5rem;
-      @extend .text-overflow;
+      .view-description {
+        font-size: 0.8rem;
+        height: 2.1rem;
+        line-height: 1rem;
+        margin-bottom: 0.5rem;
+        @extend .text-overflow;
+      }
     }
-  }
 
     .view-eyebrow {
       font-size: 0.83rem;
@@ -324,6 +325,7 @@
     }
 
     .view-controller-votes {
+      margin-bottom: 1.6rem;
       button {
         margin-top: 0 !important;
         &:not(:last-child) {

@@ -82,6 +82,15 @@
             flex-basis: 85%;
           }
         }
+
+        .banner-top-description{
+          display: flex;
+          align-items: center;
+          span{
+            padding-left: 1rem;
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
