@@ -15,12 +15,49 @@
   position: relative;
 }
 
-
 @media all and (min-width: 768px) {
-  .previous-rulings--view-grid {
-    margin: 0;
-    height: 377px;
-    width: calc(50% - $size1_5/2);
+  .container {
+    .previous-rulings-cards-grid {
+      .previous-rulings--view-grid {
+        margin: 0;
+        margin-bottom: $size1_5;
+        height: 377px;
+        width: calc(50% - $size1_5/2);
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .view-grid-container-information {
+    .icon-verdict {
+      position: absolute;
+      left: 0;
+    }
+
+    .view-description {
+      font-size: 1.1rem;
+      height: 3rem;
+      line-height: $size1_5;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .container {
+    .previous-rulings-cards-grid {
+      .previous-rulings-cards {
+        .previous-rulings--view-grid {
+          margin-right: 0;
+          margin-bottom: $size1_5;
+          height: 377px;
+          width: calc(33% - $size1_5/3);
+        }
+      }
+    }
   }
 
   .view-grid-container-information {

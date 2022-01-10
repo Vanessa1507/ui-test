@@ -1,7 +1,6 @@
 @import "../variables.scss";
 
 footer {
-  padding: 0 1rem;
   .container {
     .container-footer {
       align-items: flex-end;
@@ -33,6 +32,7 @@ footer {
           justify-content: space-between;
 
           span {
+            color: $dark-grey;
             font-size: 2rem;
           }
         }
@@ -43,9 +43,8 @@ footer {
 
 @media all and (min-width: 768px) {
   footer {
-    padding: 0 $size1_5;
+    padding: 0;
     .container {
-      padding: 0;
       .container-footer {
         align-items: center;
         padding: 2.5rem 0;
@@ -71,6 +70,25 @@ footer {
               &:not(:last-child) {
                 margin-right: 1rem;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  footer {
+    .container {
+      .container-footer {
+        font-size: 1rem;
+        padding: 2rem 0;
+
+        .social-media {
+          .social-media-icons {
+            span {
+              font-size: 1.3rem;
             }
           }
         }

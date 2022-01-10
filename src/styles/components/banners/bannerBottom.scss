@@ -4,7 +4,6 @@
   margin: 2rem 0;
 
   .container {
-    padding: 0 1rem;
     position: relative;
 
     .container-banner-bottom {
@@ -54,11 +53,11 @@
 @media all and(min-width:768px) {
   .banner-bottom {
     margin-top: 1rem;
-    padding: 0 1.5rem;
+    padding: 0;
     .container {
-      padding: 0;
       .container-banner-bottom {
         align-items: center;
+        background-image: url("../../../img/banners/bg-people.@2x.png");
         flex-direction: row;
         font-size: $size1_5;
         justify-content: space-between;
@@ -74,6 +73,20 @@
           margin-bottom: 0;
           text-align: left;
           width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media all and(min-width:1440px) {
+  .banner-bottom {
+    .container {
+      .container-banner-bottom {
+        padding: 1rem 2rem;
+
+        button {
+          width: 35%;
         }
       }
     }

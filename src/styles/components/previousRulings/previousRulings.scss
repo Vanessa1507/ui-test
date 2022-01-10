@@ -12,7 +12,8 @@
   margin-bottom: 2rem;
 
   .container {
-    padding: 0 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
     .previous-rulings-tittle {
       margin-bottom: 2rem;
       h2 {
@@ -41,7 +42,7 @@
   .view-container-information {
     color: $white;
     font-weight: 400;
-    padding: 0 2.5rem;
+    padding: 0 2.5rem 0 2.8rem;
     position: relative;
 
     .icon-verdict {
@@ -157,9 +158,15 @@
     margin-bottom: 0;
     padding: 0;
     .container {
-      padding: 0 $size1_5;
+      .previous-rulings-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+      }
 
       .previous-rulings-tittle {
+        align-items: end;
         display: flex;
         justify-content: space-between;
 
@@ -185,7 +192,7 @@
             justify-content: flex-end;
             padding-right: 1rem;
             span {
-              font-size: 0.7rem;
+              font-size: 0.5rem;
               margin-left: 1rem;
             }
           }
@@ -207,19 +214,6 @@
           }
         }
       }
-
-      .previous-rulings-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        .previous-rulings--view-grid:nth-child(even) {
-          margin-right: 0;
-        }
-        .previous-rulings--view-grid {
-          margin-bottom: $size1_5;
-        }
-      }
     }
 
     .thumbs-gauge {
@@ -232,14 +226,8 @@
           font-size: 1rem;
         }
       }
-
       .thumbs-gauge-values {
-        display: flex;
-        height: auto;
-        justify-content: space-between;
-        left: 0;
-        padding: 0.8rem 1rem;
-        position: absolute;
+        padding: 0.75rem 1rem;
         width: calc(100% - 2rem);
       }
     }
@@ -251,6 +239,99 @@
     .view-controller-votes {
       .button-vote {
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .previous-rulings {
+    .container {
+      padding: 0 $size1_5;
+
+      .previous-rulings-tittle {
+        h2 {
+          font-size: 2.5rem;
+          line-height: 3rem;
+        }
+
+        .view-picker {
+          position: relative;
+          li {
+            font-size: 0.75rem;
+          }
+          .view-picker-selected-option {
+            span {
+              font-size: 0.4rem;
+            }
+          }
+        }
+      }
+
+      .previous-rulings-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .previous-rulings--view-grid {
+          margin-bottom: $size1_5;
+        }
+      }
+    }
+
+    .thumbs-gauge {
+      div {
+        height: 2rem;
+        p {
+          font-size: 1rem;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+      
+      .thumbs-gauge-values {
+        padding: 0.5rem 0.8rem;
+        width: calc(100% - 1.6rem);
+      }
+    }
+
+    
+  .view-container-information {
+    .icon-verdict {
+      position: absolute;
+      left: 0;
+    }
+
+    .view-name {
+      font-size: 2rem;
+      line-height: normal;
+      -webkit-line-clamp: 2;
+      @extend .text-overflow;
+    }
+
+    .view-description {
+      font-size: 0.8rem;
+      height: 2.1rem;
+      line-height: 1rem;
+      margin-bottom: 0.5rem;
+      @extend .text-overflow;
+    }
+  }
+
+    .view-eyebrow {
+      font-size: 0.83rem;
+      margin-bottom: 1rem;
+    }
+
+    .view-controller-votes {
+      button {
+        margin-top: 0 !important;
+        &:not(:last-child) {
+          margin-right: 0.6rem;
+        }
+      }
+      .button-vote {
+        padding: 0.5rem 1.3rem;
       }
     }
   }

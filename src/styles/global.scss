@@ -16,7 +16,7 @@ span {
 .container {
   margin: auto;
   max-width: 720px;
-  padding: 0 21px;
+  padding: 0 1rem;
 }
 
 .thumb-up {
@@ -44,7 +44,7 @@ span {
   }
 
   .container {
-    padding: 0 $size1_5;
+    padding: 0 $size1_8;
     max-width: 960px;
   }
 }

@@ -2,7 +2,6 @@
 
 .banner-top {
   margin: 2rem 0;
-  padding: 0 1rem;
 
   .container {
     .banner-top-container {
@@ -18,11 +17,11 @@
         line-height: $size1_5;
         &:first-child {
           line-height: normal;
-          padding-right: 2rem;
-          flex-basis: 30%;
+          padding-right: $size1_25;
+          flex-basis: 40%;
         }
         &:last-child {
-          flex-basis: 70%;
+          flex-basis: 60%;
         }
       }
 
@@ -36,10 +35,9 @@
 
 @media all and (min-width: 768px) {
   .banner-top {
-    padding: 0 1.5rem;
+    padding: 0;
 
     .container {
-      padding: 0;
       .banner-top-container {
         padding: 1rem;
 
@@ -58,6 +56,30 @@
           }
           &:last-child {
             flex-basis: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .banner-top {
+    padding: 0 1.5rem;
+
+    .container {
+      padding: 0;
+      .banner-top-container {
+        padding: 1rem;
+
+        div {
+          font-size: 1rem;
+          &:first-child {
+            font-size: 1rem;
+            flex-basis: 15%;
+          }
+          &:last-child {
+            flex-basis: 85%;
           }
         }
       }

@@ -16,8 +16,8 @@ const PreviousRulings = () => {
   const dispatch = useDispatch();
 
   //Local states
-  const [styleView, setStyleView] = useState('List');
-  const [isShowPicker, setIsShowPicker] = useState(true);
+  const [styleView, setStyleView] = useState('Grid');
+  const [isShowPicker, setIsShowPicker] = useState(false);
   const [dataVotesPeople, setDataVotesPeople] = useState([]);
 
   //Hooks
@@ -103,7 +103,8 @@ const PreviousRulings = () => {
             )
           }
         </div>
-        <div className={`previous-rulings-cards`}>
+        <div className={`previous-rulings-cards-${styleView.toLowerCase()}`}>
+          <div className='previous-rulings-cards'>
           {
             !!dataVotesPeople && dataVotesPeople.lenght !== 0 && (
               <>
@@ -132,6 +133,7 @@ const PreviousRulings = () => {
               </>
             )
           }
+          </div>
         </div>
       </div>
     </div>
