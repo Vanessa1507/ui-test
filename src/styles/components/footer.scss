@@ -1,40 +1,38 @@
 @import "../variables.scss";
 
 footer {
-  .container {
-    .container-footer {
-      align-items: flex-end;
-      display: flex;
-      border-top: 2px dashed $grey-primary;
-      font-size: $size1_25;
-      font-weight: 400;
-      justify-content: space-between;
+  .container-footer {
+    align-items: flex-end;
+    border-top: 2px dashed $grey-primary;
+    display: flex;
+    font-size: $size1_25;
+    font-weight: 400;
+    justify-content: space-between;
+    padding: 1.45rem 0 2.8rem;
 
-      padding: 1.45rem 0 2.8rem;
-      nav {
-        a {
-          display: block;
-          &:not(:last-child) {
-            margin-bottom: $size1_5;
-          }
+    nav {
+      a {
+        display: block;
+        &:not(:last-child) {
+          margin-bottom: $size1_5;
         }
       }
+    }
 
-      .social-media {
+    .social-media {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-bottom: 0.5rem;
+      }
+
+      .social-media-icons {
         display: flex;
-        flex-direction: column;
-        p {
-          margin-bottom: 0.5rem;
-        }
+        justify-content: space-between;
 
-        .social-media-icons {
-          display: flex;
-          justify-content: space-between;
-
-          span {
-            color: $dark-grey;
-            font-size: 2rem;
-          }
+        span {
+          color: $dark-grey;
+          font-size: 2rem;
         }
       }
     }
@@ -44,32 +42,30 @@ footer {
 @media all and (min-width: 768px) {
   footer {
     padding: 0;
-    .container {
-      .container-footer {
-        align-items: center;
-        padding: 2.5rem 0;
-        nav {
-          a {
-            display: inline;
-            margin-bottom: 0;
-            &:not(:last-child) {
-              margin-right: 2rem;
-            }
+    .container-footer {
+      align-items: center;
+      padding: 2.5rem 0;
+      nav {
+        a {
+          display: inline;
+          margin-bottom: 0;
+          &:not(:last-child) {
+            margin-right: 2rem;
           }
         }
+      }
 
-        .social-media {
-          flex-direction: row;
-          align-items: center;
-          p {
-            margin-bottom: 0;
-            margin-right: 1rem;
-          }
-          .social-media-icons {
-            a {
-              &:not(:last-child) {
-                margin-right: 1rem;
-              }
+      .social-media {
+        align-items: center;
+        flex-direction: row;
+        p {
+          margin-bottom: 0;
+          margin-right: 1rem;
+        }
+        .social-media-icons {
+          a {
+            &:not(:last-child) {
+              margin-right: 1rem;
             }
           }
         }
@@ -80,16 +76,14 @@ footer {
 
 @media all and (min-width: 1440px) {
   footer {
-    .container {
-      .container-footer {
-        font-size: 1rem;
-        padding: 2rem 0;
+    .container-footer {
+      font-size: 1rem;
+      padding: 2rem 0;
 
-        .social-media {
-          .social-media-icons {
-            span {
-              font-size: 1.3rem;
-            }
+      .social-media {
+        .social-media-icons {
+          span {
+            font-size: 1.3rem;
           }
         }
       }

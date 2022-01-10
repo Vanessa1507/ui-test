@@ -1,7 +1,6 @@
 @import "./variables.scss";
 
-html,
-body {
+body, html {
   color: $grey-primary;
   font-family: $primary-font;
   font-size: 12px;
@@ -38,25 +37,23 @@ span {
 }
 
 @media all and (min-width: 768px) {
-  html,
-  body {
+  body, html{
     font-size: 14px;
   }
 
   .container {
-    padding: 0 $size1_8;
     max-width: 960px;
+    padding: 0 $size1_8;
   }
 }
 
 @media all and (min-width: 1440px) {
-  html,
-  body {
+  body, html{
     font-size: 18px;
   }
 
   .container {
-    padding: 0 $size1_5;
     max-width: 1099px;
+    padding: 0 $size1_5;
   }
 }

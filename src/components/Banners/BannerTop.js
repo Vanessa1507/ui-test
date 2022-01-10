@@ -13,7 +13,7 @@ const BannerTop = () => {
 
           <div className="banner-top-description">
             <p>Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report.</p>
-            {isDesktop && <span className="icon-close"/>}
+            {isDesktop && <span className="icon-close" />}
           </div>
         </div>
       </div>

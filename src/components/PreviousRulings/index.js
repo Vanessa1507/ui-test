@@ -105,34 +105,34 @@ const PreviousRulings = () => {
         </div>
         <div className={`previous-rulings-cards-${styleView.toLowerCase()}`}>
           <div className='previous-rulings-cards'>
-          {
-            !!dataVotesPeople && dataVotesPeople.lenght !== 0 && (
-              <>
-                {
-                  styleView === 'Grid' && dataVotesPeople.map((card, index) => {
-                    return (
-                      <GridCard
-                        index={index}
-                        card={card}
-                        key={index}
-                      />
-                    )
-                  })
-                }
-                {
-                  styleView === 'List' && dataVotesPeople.map((card, index) => {
-                    return (
-                      <ListCard
-                        index={index}
-                        card={card}
-                        key={index}
-                      />
-                    )
-                  })
-                }
-              </>
-            )
-          }
+            {
+              !!dataVotesPeople && dataVotesPeople.lenght !== 0 && (
+                <>
+                  {
+                    styleView === 'Grid' && dataVotesPeople.map((card, index) => {
+                      return (
+                        <GridCard
+                          index={index}
+                          card={card}
+                          key={index}
+                        />
+                      )
+                    })
+                  }
+                  {
+                    styleView === 'List' && dataVotesPeople.map((card, index) => {
+                      return (
+                        <ListCard
+                          index={index}
+                          card={card}
+                          key={index}
+                        />
+                      )
+                    })
+                  }
+                </>
+              )
+            }
           </div>
         </div>
       </div>

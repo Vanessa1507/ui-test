@@ -30,12 +30,12 @@ const ControllerVotes = (props) => {
   useEffect(() => {
     const differenceMilliseconds = new Date().getTime() - new Date(lastUpdated).getTime();
     const day = 1000 * 60 * 60 * 24;
-    const month = day*30;
+    const month = day * 30;
     const year = month * 12;
-    
+
     const days = differenceMilliseconds / day;
     const months = Math.floor(differenceMilliseconds / month);
-    const years = Math.floor(differenceMilliseconds/year);
+    const years = Math.floor(differenceMilliseconds / year);
 
 
     const timeStamp = years >= 1
@@ -43,9 +43,9 @@ const ControllerVotes = (props) => {
       : months >= 1
         ? `${months} ${months !== 1 ? 'months' : 'month'}`
         : `${Math.floor(days)} ${Math.floor(days) !== 1 ? 'days' : 'day'}`;
-    
+
     setDateLastUpdated(timeStamp);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 

@@ -70,10 +70,10 @@ header {
   }
 }
 
-@media all and (min-width: "1440px") {
+@media all and (min-width: 1440px) {
   .desktop-menu {
-    display: flex;
     align-items: center;
+    display: flex;
 
     li {
       font-size: 1rem;
