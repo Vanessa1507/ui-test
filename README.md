@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Zemoga Front End Development - UI Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This test was about a website called 'Rule of Thumb' that tracks the sentiment of their users on trending and controversial people from different fields, including politics, business, media and entertainment, etc. This project lets their users share their opinion about different celebrities in an easy way. This website uses votes represented with thumb up and down buttons and their interaction has an effect into it that represents the results  of both parameters. On the other hand, this website should be responsive so it adapts to smartphones, tablet and desktop.
 
-## Available Scripts
+## Development
 
-In the project directory, you can run:
+For this project, I used React because from my point of view it is a powerful framework since it allows me to create better interfaces and a good experience for the users, but also because with this framework it is easier to understand and more organized (obviously when you have good practices).
 
-### `npm start`
+To the styles, I used pure css to create the styles of the project, but also I used Sass preprocessor because I can create variables that represent the colors, fonts, and sizes that are transversal of the project. If I have to change some of them, it would be easy because I only have to change the value of these variables. But also for the hierarchy because I can group the elements and apply the styles that  I want to,  and because I can reduce the code lines because I don't have to repeat the same lines for different tags or classes if I use @extend rule.
+
+With this in mind, I re-structured the project in different components that I identified. I did that because if in the future I have to create some functionality, add new elements, put that one in another component or remove the component it would be easier this process and I can have its elements and its functionality separated to the rest ones. Later I started to create the requirements of the project, for this I used the React Tracked dependency to control the global state, I created a personalized hook to control some functionality inside the components and the LocalStorage to persist the data.
+
+Finally, this is the result of my test, I hope you enjoy interacting with that as I enjoyed developing it. Thank you for giving me the opportunity and I am awaiting your feedback 😁.
+
+#### [Demo](https://ui-test-vanessa-suarez.vercel.app/)
+
+## Manual
+
+### `yarn install`
+Install all dependencies for the project.
+
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
