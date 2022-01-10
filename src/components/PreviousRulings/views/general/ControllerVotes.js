@@ -1,6 +1,12 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+//Store
 import { useDispatch, useTrackedState } from '../../../../Store/index';
+//Functions
 import getPercent from './../../../../js/functions/getPercent';
+
+//Const
+const buttons = ['up', 'down'];
+
 
 const ControllerVotes = (props) => {
   const { category, id, index, lastUpdated } = props;
@@ -12,16 +18,35 @@ const ControllerVotes = (props) => {
   //Local state
   const [isDisable, setIsDisable] = useState(true);
   const [activeThumb, setActiveThumb] = useState(null);
+  const [dateLastUpdated, setDateLastUpdated] = useState(null);
   const [voteAlready, setVoteAlready] = useState(false);
-
-  //Const
-  const buttons = ['up', 'down'];
-
 
   const changeActiveThumb = (value) => {
     setIsDisable(false);
     setActiveThumb(value);
   };
+
+
+  useEffect(() => {
+    const differenceMilliseconds = new Date().getTime() - new Date(lastUpdated).getTime();
+    const day = 1000 * 60 * 60 * 24;
+    const month = day*30;
+    const year = month * 12;
+    
+    const days = differenceMilliseconds / day;
+    const months = Math.floor(differenceMilliseconds / month);
+    const years = Math.floor(differenceMilliseconds/year);
+
+
+    const timeStamp = years >= 1
+      ? `${years} ${years !== 1 ? 'years' : 'year'}`
+      : months >= 1
+        ? `${months} ${months !== 1 ? 'months' : 'month'}`
+        : `${Math.floor(days)} ${Math.floor(days) !== 1 ? 'days' : 'day'}`;
+    
+    setDateLastUpdated(timeStamp);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
 
   const vote = () => {
@@ -68,7 +93,7 @@ const ControllerVotes = (props) => {
     <>
       <p className="view-eyebrow"> {
         !voteAlready
-          ? `1 month ago in ${category.charAt(0).toUpperCase() + category.slice(1)}`
+          ? `${dateLastUpdated} ago in ${category.charAt(0).toUpperCase() + category.slice(1)}`
           : 'Thank you for your vote!'
       }</p>
 
