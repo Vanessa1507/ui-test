@@ -114,7 +114,7 @@
   .view-controller-votes {
     align-items: center;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 1rem;
 
     button {
@@ -166,7 +166,7 @@
       }
 
       .previous-rulings-tittle {
-        align-items: end;
+        align-items: flex-end;
         display: flex;
         justify-content: space-between;
 
@@ -307,7 +307,6 @@
         font-size: 2rem;
         line-height: normal;
         -webkit-line-clamp: 2;
-        @extend .text-overflow;
       }
 
       .view-description {

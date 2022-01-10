@@ -162,7 +162,6 @@
         padding-top: 1rem;
 
         &::after {
-          @extend .closing-in-bar-after;
           border-width: 8px;
           right: -16px;
         }

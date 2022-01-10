@@ -1,9 +1,9 @@
 @import "../variables.scss";
 
-.mobile-menu-size{
-    left: 0;
-    top: 0;
-    width: 100vw;
+.mobile-menu-size {
+  left: 0;
+  top: 0;
+  width: 100vw;
 }
 
 header {
@@ -29,7 +29,7 @@ header {
     justify-content: space-between;
   }
 
-  .mobile-menu-background{
+  .mobile-menu-background {
     background-color: rgba($color: $black, $alpha: 0.6968);
     height: 100vh;
     position: absolute;
@@ -70,24 +70,23 @@ header {
   }
 }
 
-
-@media all and (min-width: '1440px'){
-  .desktop-menu{
+@media all and (min-width: "1440px") {
+  .desktop-menu {
     display: flex;
     align-items: center;
-    
+
     li {
       font-size: 1rem;
       font-weight: 300;
       text-align: center;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 1rem;
       }
     }
 
-    .desktop-menu-search{
-      span{
+    .desktop-menu-search {
+      span {
         font-size: 2rem;
       }
     }
